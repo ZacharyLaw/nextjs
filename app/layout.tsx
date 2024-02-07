@@ -1,36 +1,24 @@
-"use client";
-import React, { useEffect, useState } from 'react';
-
-import $ from 'jquery';
+"use client"; 
+import { useEffect, useState } from 'react';
 interface DemoProps {}
-
 export default function Demo({}: DemoProps) {
   const [count, setCount] = useState(0);
-
   useEffect(() => {
-      if (typeof window !== 'undefined') {
-       if($('#incrementBtn').length==1) $('#incrementBtn').click(() => setCount((prevCount) => prevCount + 1));
-       if($('#decrementBtn').length==1) $('#decrementBtn').click(() => setCount((prevCount) => prevCount - 1));
-        console.log($('body'));
-      }
-
+    console.log('The count is:', count);
     return () => {
-      if (typeof window !== 'undefined') {
-        $('#incrementBtn').off('click');
-        $('#decrementBtn').off('click');
-      }
+      console.log('I am being cleaned up!');
     };
-  }, []);
-
+  }, [count]); 
   return (
-    <html>
-      <body>
-        <div>
-          <h1>Count Update: {count}</h1>
-          <button id="decrementBtn">Decrement</button>
-          <button id="incrementBtn">Increment</button>
-        </div>
-      </body>
-    </html>
+    <html><body>
+    <div>
+      <h1>Count Update: {count}</h1>
+      <button onClick={() => setCount(count - 1)}>
+        Decrement
+      </button>
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+    </div></body></html>
   );
 }
