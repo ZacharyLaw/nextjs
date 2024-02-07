@@ -1,14 +1,8 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
-
-export const metadata: Metadata = { title: "5bus" };
-
-interface RootLayoutProps {
-  children: React.ReactNode;
+export const metadata: Metadata = {title: "5bus"};
+export default function RootLayout({children,
+}: Readonly<{children: React.ReactNode}>) {
+  return (<html><body>{children}</body></html>);
 }
-
-const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export default RootLayout;
