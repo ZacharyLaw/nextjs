@@ -7,6 +7,8 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return <>{children}</>;
-}
+};
+
+export default RootLayout;
