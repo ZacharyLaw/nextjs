@@ -1,7 +1,8 @@
-import Image from "next/image";
 
-export default function Home() {
-  return (
-    <h1>5bus</h1>
-  );
+import type { Metadata } from "next";
+import "./globals.css";
+export const metadata: Metadata = {title: "5bus"};
+export default function RootLayout({children,
+}: Readonly<{children: React.ReactNode}>) {
+  return ({children});
 }
