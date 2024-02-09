@@ -2,7 +2,6 @@
 import { useLocalStorage } from "./useLocalStorage.js";
 export default function Demo() {
   const [count, setCount] = useLocalStorage("count", "");
-
   return (
     <html lang="en"> 
       <body>
