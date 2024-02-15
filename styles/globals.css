@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+html{
+  background-color: black;
+}
+*{
+  color: white
+}
