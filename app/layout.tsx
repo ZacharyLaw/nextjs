@@ -7,7 +7,7 @@ export default function Demo() {
     <html lang="en"> 
       <body>
         <div>
-          <h1>Count Update: </h1>
+          <h1>Seperate branch <br></br> Count Update: </h1>
           <button onClick={() => setCount(count - 1)}>Decrement</button>
           <button onClick={() => setCount(count + 1)}>Increment</button>
         </div>
