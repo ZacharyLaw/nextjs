@@ -1,7 +1,7 @@
 'use client'
 
 import styles from "../styles/Home.module.css";
-import { useLocalStorage } from "./useLocalStorage.js";
+import { useLocalStorage } from "./useLocalStorage.tsx";
 export default function Home() {
   const [count, setCount] = useLocalStorage("count", 0);
   return (
