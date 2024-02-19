@@ -20,7 +20,7 @@ export default function Home() {
         <h1>yolo cors {count}</h1>
         <button onClick={()=>setCount(count-1)}>Decrement</button>
         <button onClick={()=>setCount(count+1)}>Increment</button>
-        <aside class='lane'></aside>
+        <aside className='lane'></aside>
         <iframe src="https://web.chelaile.net.cn/customer_ch5/?1=2&src=webapp_zhongshan#!/linedetail/0760-018-0"></iframe>
       </main>
     </div>
