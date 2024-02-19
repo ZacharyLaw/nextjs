@@ -1,11 +1,16 @@
-import styles from "../styles/Home.module.css";
+'use client'
 
+import styles from "../styles/Home.module.css";
+import { useLocalStorage } from "./useLocalStorage.js";
 export default function Home() {
+  const [count, setCount] = useLocalStorage("count", 0);
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1>yolo cors</h1>
-        <iframe src="https://web.chelaile.net.cn/customer_ch5/?1=2&src=webapp_zhongshan&sessionId=CB9EF8D44B34EF63E1FBD2F362776C1C#!/linedetail/0760-018-0"></iframe>
+        <h1>yolo cors {count}</h1>
+        <button onClick={()=>setCount(count-1)}>Decrement</button>
+        <button onClick={()=>setCount(count+1)}>Increment</button>
+        <iframe src="https://web.chelaile.net.cn/customer_ch5/?1=2&src=webapp_zhongshan#!/linedetail/0760-018-0"></iframe>
       </main>
     </div>
   );
