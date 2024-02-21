@@ -23,7 +23,14 @@ jobs:
       - name: Build
         run: |
           npm ci
+          npm run build
+          npm run export
+          touch out/.nojekyll
           # configure the build here
 
       - name: Deploy
-        # configure an external GitHub Pages deploy workflow here
+        # https://github.com/JamesIves/github-pages-deploy-action
+        uses: JamesIves/github-pages-deploy-action@4.4.0 
+        with:
+          branch: gh-pages
+          folder: out
