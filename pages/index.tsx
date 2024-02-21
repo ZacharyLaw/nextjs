@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1>yolo cors {count}</h1>
+        <h1>huh yolo cors {count}</h1>
         <button onClick={()=>setCount(count-1)}>Decrement</button>
         <button onClick={()=>setCount(count+1)}>Increment</button>
         <aside className='lane'></aside>
